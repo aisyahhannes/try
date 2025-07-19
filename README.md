@@ -87,14 +87,14 @@ This system demonstrates commercial value by digitalizing and streamlining food 
 
 **3.1 Technology Stack:**
 
-Programming Languages: JavaScript
-Frontend: HTML, CSS, JavaScript, PHP
-Backend Framework: Node.js with Express
-Database: MySQL (via phpMyAdmin)
-Server Environment: XAMPP (Apache, MySQL)
-Communication: TCP (Node.js net module), RESTful api
-SMS Notification: Mocean API
-Tools: Postman for API testing
+Programming Languages: JavaScript<br/>
+Frontend: HTML, CSS, JavaScript, PHP<br/>
+Backend Framework: Node.js with Express<br/>
+Database: MySQL (via phpMyAdmin)<br/>
+Server Environment: XAMPP (Apache, MySQL)<br/>
+Communication: TCP (Node.js net module), RESTful api<br/>
+SMS Notification: Mocean API<br/>
+Tools: Postman for API testing<br/>
 
 **3.2 API Documentation**
 
