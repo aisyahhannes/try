@@ -83,7 +83,7 @@ This system demonstrates commercial value by digitalizing and streamlining food 
 
 **External Service:** Mocean API – Sends SMS notifications to the customers when the order is ready, using API key authentication.
 
-**3.0 Backend Application**
+### **3.0 Backend Application**
 
 **3.1 Technology Stack:**
 
