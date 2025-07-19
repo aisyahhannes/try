@@ -68,18 +68,16 @@ This system demonstrates commercial value by digitalizing and streamlining food 
 ### **2.0 System Architecture**
 
 **2.1 High-Level Diagram**
-**Frontend/UI:**
 
+<img src="md pic/erd.jpg">
+
+**Frontend/UI:**
 - Kiosk for customer to place orders by selecting the menu on the screen
 - Kitchen dashboard for staff to handle the incoming orders and prepare the food
-
 **Backend**:
-
 - PHP (REST API) – Handle requests from the kiosk
 - Node.js (TCP Server) – Listens for new orders and broadcasts them to the kitchen dashboard in real-time via TCP sockets.
-
 **Database:** MySQL – Stores all data of orders, order items, and menu.
-
 **External Service:** Mocean API – Sends SMS notifications to the customers when the order is ready, using API key authentication.
 
 **3.0 Backend Application**
