@@ -15,8 +15,6 @@
 | B032420145 | ROHANA | S3/1-DE |
 | B032420155 | SYAFIQAH IRDINA BINTI SHAMSHUL | S3/1-DE |
 
-**U-Cafe Ordering System**
-
 ### **1.0 Introduction**
 
 **1.1 Project Overview**
@@ -46,7 +44,7 @@ Scope that involved in U-Cafe Ordering System is divided into two parts, which a
 The customers and kitchen staff are the main users for U-Cafe Ordering System. The system targets the UTeM community including students and staff who frequent the campus cafe. Kitchen staff includes the chefs, cooks, and other kitchen personnel responsible for managing food orders at UTeM Cafe. These users will primarily interact with the U-Cafe Ordering System (UOS).
 
 2. Module
- 1. Self-Service Order Placement
+- 1. Self-Service Order Placement
 
 Development of kiosk interface for customers to browse menus, select items and submit them.
 
