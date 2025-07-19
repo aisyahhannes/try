@@ -17,7 +17,7 @@
 
 **U-Cafe Ordering System**
 
-###**1.0 Introduction**
+### **1.0 Introduction**
 
 **1.1 Project Overview**
 
@@ -67,7 +67,7 @@ This system demonstrates commercial value by digitalizing and streamlining food 
 - **Mocean API:** Used to send SMS notifications to customers when their orders are ready. The API requires an API key and secret key obtained from the Mocean platform.
 - **Justification:** SMS is a reliable and direct communication method to ensure customers are informed especially when they are away from the queue display screen or not present in the cafeteria.
 
-###**2.0 System Architecture**
+### **2.0 System Architecture**
 
 **2.1 High-Level Diagram**
 **Frontend/UI:**
