@@ -261,9 +261,11 @@ The Kiosk Ordering System implements API Key-based security to protect backend A
 **6.1 Flowcharts**
 
 Customer Flowchart
+
 <img src="md pic/flowchart cust.png">
 
 Kitchen Flowchart
+
 <img src="md pic/flowchart kitchen.png">
 
 **6.2 Data Validation**
