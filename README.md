@@ -149,7 +149,7 @@ Request Body:
 
   "order_type": "dine_in",
 
-  "items": \[
+  "items": [
 
     {"item_name": "Nasi Lemak Ayam", "quantity": 1}
 
@@ -174,7 +174,7 @@ Request Body:
 **Status: 500 Internal Server Error**
 ```js
 {
-“error”: “Failed to update status”
+    "error": "Failed to update status"
 }
 ```
 
@@ -194,7 +194,7 @@ Request Body:
 **Status: 400 Bad Request**
 ```js
 {
-    “error”: “Failed to create order”
+    "error": "Failed to create order"
 }
 ```
 
@@ -216,22 +216,22 @@ The Kiosk Ordering System implements API Key-based security to protect backend A
 | Endpoint Protection | All sensitive endpoints are protected using this middleware. |
 | Environmental Storage | The API key is stored in the .env file, preventing hardcoding in source files and reducing security risks. |
 
-**4.0 Frontend Application**
+### **4.0 Frontend Application**
 
-**2.3.1 Self-Service Kiosk Interface (Customer)**
+**4.1 Self-Service Kiosk Interface (Customer)**
 
 - Purpose: A touch-based interface where customers can place food orders, select dining options (e.g., dine-in, takeaway), input contact info, view the cart, and place order.
 - Target User: Walk-in café customers using a self-service kiosk.
 - Technology Stack: HTML, CSS, JavaScript
 - API Integration:
 
-\- Sends POST requests to `/api\_kitchen/create\_order.php` with order data.
+\- Sends POST requests to `/api_kitchen/create_order.php` with order data.
 
-\- Uses GET requests to `/api\_customer/menu\_api.php` and `/api\_customer/categories\_api.php` to dynamically load menu items by category.
+\- Uses GET requests to `/api_customer/menu_api.php` and `/api_customer/categories_api.php` to dynamically load menu items by category.
 
 \- API Key is added in headers (x-api-key) for secure communication.
 
-**2.3.2 Kitchen Dashboard Interface (Kitchen)**
+**4.2 Kitchen Dashboard Interface (Kitchen)**
 
 - Purpose: Displays real-time incoming orders and allows kitchen staff to update the status of each order (e.g., pending → preparing → ready).
 - Target User: Kitchen staff and servers managing order fulfillment.
