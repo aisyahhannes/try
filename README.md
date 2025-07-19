@@ -244,7 +244,7 @@ The Kiosk Ordering System implements API Key-based security to protect backend A
 
 \- Triggers SMS to customer by POST request to `/routes/update_status.js` after status is updated to "ready".
 
-**5.0 Database Design**
+### **5.0 Database Design**
 
 **5.1 Entity-Relationship Diagram (ERD)**
 <img src="md pic/erd.jpg">
@@ -256,7 +256,7 @@ The Kiosk Ordering System implements API Key-based security to protect backend A
 - Table order\_items allows multiple items per order (**one-to-many** relationship with orders).
 - Table menu\_items keeps menu organized and simplifies UI filtering.
 
-**6.0 Business Logic and Data Validation**
+### **6.0 Business Logic and Data Validation**
 
 **6.1 Flowcharts**
 
@@ -282,7 +282,7 @@ Kitchen Flowchart
 - Status Constraint: Every new order is inserted into the database with a default status of "Pending".
 - Status Flow Validation: Order status can only change in the sequence Pending → Preparing → Ready. An order cannot be marked as "Ready" unless it was first marked as "Pending".
 
-**7.0 Conclusion**
+### **7.0 Conclusion**
 
 The **U-Cafe Ordering System** was developed to address inefficiencies in UTeM’s existing café ordering process. By digitalizing the workflow, the system enhances order accuracy, reduces customer waiting time, minimizes paper usage, and significantly improves the overall user experience for both customers and kitchen staff.
 
