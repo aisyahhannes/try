@@ -120,7 +120,7 @@ Tools: Postman for API testing<br/>
 
 **3.2.3 Request Formats**
 
-_POST /update\_status_
+<ins>POST /update\_status</ins>
 
 http://localhost:3000/update_status
 
@@ -137,7 +137,7 @@ Request Body:
 }
 ```
 
-_POST /create\_order_
+<ins>POST /create\_order</ins>
 
 Request Body:
 ```js
@@ -160,7 +160,7 @@ Request Body:
 
 **3.2.4 Responses**
 
-_**POST /update\_status**_
+<ins>**POST /update\_status**</ins>
 
 - **Success**
 **Status: 200 OK**
@@ -178,7 +178,7 @@ _**POST /update\_status**_
 }
 ```
 
-_**POST /create\_order**_
+<ins>**POST /create\_order**</ins>
 
 - **Success**
 
