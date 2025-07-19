@@ -1,18 +1,10 @@
-**FACULTY OF INFORMATION & COMMUNICATION TECHNOLOGY**
+#**FACULTY OF INFORMATION & COMMUNICATION TECHNOLOGY**
+##**BACHELOR IN COMPUTER SCIENCE (SOFTWARE DEVELOPMENT)**
+##**BITP 3123 - DISTRIBUTED APPLICATION DEVELOPMENT**
 
-**BACHELOR IN COMPUTER SCIENCE**
+**PROJECT: U-CAFE ORDERING SYSTEM**
 
-**(SOFTWARE DEVELOPMENT)**
-
-**BITP 3123 - DISTRIBUTED APPLICATION DEVELOPMENT**
-
-**PROJECT:**
-
-U-CAFE ORDERING SYSTEM
-
-**LECTURER**
-
-MUHAMMAD FAHEEM BIN MOHD EZANI
+**LECTURER: MUHAMMAD FAHEEM BIN MOHD EZANI**
 
 | **MATRIC NO** | **FULL NAME** | **SECTION** |
 | --- | --- | --- |
@@ -25,13 +17,13 @@ MUHAMMAD FAHEEM BIN MOHD EZANI
 
 **U-Cafe Ordering System**
 
-**1.0 Introduction**
+###**1.0 Introduction**
 
 **1.1 Project Overview**
 
 This report explains the development of the **U-Cafe Ordering System (UOS)** specifically designed for UTeM’s campus cafe. As a UTeM’s student, we had witnessed the inefficiencies of traditional paper-based ordering processes at the cafe. The current food ordering process is manual which leads to order inaccuracies, communication delays between customers and kitchen staff, and time-consuming order processing that leads to extended waiting periods during peak hours. In response to this, we have developed U-Cafe Ordering System to streamline the process where the customer can conveniently place their food and beverage orders through a self-service kiosk while the system will relay these orders in real-time to the kitchen staff. This initiative aims to enhance the overall customer experience and optimize operational workflows for cafe in UTeM campus.
 
-**Target Users:** \_Customers (sender-ordering), Kitchen Staff (receiver-receiving orders).\_
+**Target Users:** _Customers (sender-ordering), Kitchen Staff (receiver-receiving orders)._
 
 **1.2 Problem Statements**
 
@@ -53,16 +45,16 @@ Scope that involved in U-Cafe Ordering System is divided into two parts, which a
 
 The customers and kitchen staff are the main users for U-Cafe Ordering System. The system targets the UTeM community including students and staff who frequent the campus cafe. Kitchen staff includes the chefs, cooks, and other kitchen personnel responsible for managing food orders at UTeM Cafe. These users will primarily interact with the U-Cafe Ordering System (UOS).
 
-1. Module
+2. Module
  1. Self-Service Order Placement
 
 Development of kiosk interface for customers to browse menus, select items and submit them.
 
-- 1. Real-time Order Display
+- 2. Real-time Order Display
 
 Development of a display system for the kitchen to receive, view, and manage incoming orders digitally.
 
-- 1. Order Status Tracking
+- 3. Order Status Tracking
 
 Functionality to update the status of orders (Pending, Preparing, Ready)
 
@@ -75,7 +67,8 @@ This system demonstrates commercial value by digitalizing and streamlining food 
 - **Mocean API:** Used to send SMS notifications to customers when their orders are ready. The API requires an API key and secret key obtained from the Mocean platform.
 - **Justification:** SMS is a reliable and direct communication method to ensure customers are informed especially when they are away from the queue display screen or not present in the cafeteria.
 
-**2.0 System Architecture**
+###**2.0 System Architecture**
+
 **2.1 High-Level Diagram**
 **Frontend/UI:**
 
@@ -96,78 +89,29 @@ This system demonstrates commercial value by digitalizing and streamlining food 
 **3.1 Technology Stack:**
 
 Programming Languages: JavaScript
-
 Frontend: HTML, CSS, JavaScript, PHP
-
 Backend Framework: Node.js with Express
-
 Database: MySQL (via phpMyAdmin)
-
 Server Environment: XAMPP (Apache, MySQL)
-
 Communication: TCP (Node.js net module), RESTful api
-
 SMS Notification: Mocean API
-
 Tools: Postman for API testing
 
 **3.2 API Documentation**
 
 **3.2.1 List of Endpoints**
 
-**Endpoint**
+| **Endpoint**                         | **Method** | **Description**                                       |
+|-------------------------------------|------------|-------------------------------------------------------|
+| /api_customer/getorder_api.php      | GET        | Get all orders                                        |
+| /api_customer/menu_api.php          | GET        | Get all menu items                                    |
+| /api_customer/categories_api.php    | GET        | Get menu by category                                  |
+| /api_kitchen/order_numbers.php      | GET        | Get order by ID                                       |
+| /api_kitchen/orders.php             | GET        | Get all orders (for kitchen)                          |
+| /api_kitchen/create_order.php       | POST       | Create a new order                                    |
+| /api_kitchen/update_status.php      | PUT        | Update order status                                   |
+| /routes/update_status.js            | POST       | Send SMS notification to customer (via Mocean)        |
 
-**Method**
-
-**Description**
-
-/api\_customer/getorder\_api.php
-
-GET
-
-Get all orders
-
-/api\_customer/menu\_api.php
-
-GET
-
-Get all menu items
-
-/api\_customer/categories\_api.php
-
-GET
-
-Get menu by category
-
-/api\_kitchen/order\_numbers.php
-
-GET
-
-Get order by ID
-
-/api\_kitchen/orders.php
-
-GET
-
-Get all orders (for kitchen)
-
-/api\_kitchen/create\_order.php
-
-POST
-
-Create a new order
-
-/api\_kitchen/update\_status.php
-
-PUT
-
-Update order status
-
-/routes/update\_status.js
-
-POST
-
-Send SMS notification to customer (via Mocean)
 
 **3.2.2 HTTP Methods**
 
@@ -177,91 +121,83 @@ Send SMS notification to customer (via Mocean)
 
 **3.2.3 Request Formats**
 
-**POST /update\_status**
+<u>POST /update\_status</u>
 
+http://localhost:3000/update_status
 
+Headers: Content-Type: application/json
 
-**Headers:**
-
-Content-Type: application/json
-
-**Request Body:**
-
+Request Body:
+```js
 {
 
-    "order\_id": 8,
+    "order_id": 8,
 
-    "new\_status": "preparing"
+    "new_status": "preparing"
 
 }
+```
 
-**POST /create\_order**
+<u>POST /create\_order</u>
 
-**Request Body:**
-
+Request Body:
+```js
 {
 
-  "customer\_name": "Dijah",
+  "customer_name": "Dijah",
 
-  "customer\_phone": "60123456789",
+  "customer_phone": "60123456789",
 
-  "order\_type": "dine\_in",
+  "order_type": "dine_in",
 
   "items": \[
 
-    {"item\_name": "Nasi Lemak Ayam", "quantity": 1}
+    {"item_name": "Nasi Lemak Ayam", "quantity": 1}
 
-  \]
+  ]
 
 }
+```
 
 **3.2.4 Responses**
 
-**POST /update\_status**
+<u>**POST /update\_status**</u>
 
 - **Success**
-
 **Status: 200 OK**
-
+```js
 {
-
     "message": "Status updated successfully"
-
 }
+```
 
 - **Error: Update Status Failed**
-
 **Status: 500 Internal Server Error**
-
+```js
 {
-
 “error”: “Failed to update status”
-
 }
+```
 
-**POST /create\_order**
+<u>**POST /create\_order**</u>
 
 - **Success**
 
 **Status: 201 Created**
-
+```js
 {
-
     "message": "Order created",
-
-    "order\_id": 18
-
+    "order_id": 18
 }
+```
 
 - **Error: Create Order Failed**
-
 **Status: 400 Bad Request**
-
+```js
 {
-
-“error”: “Failed to create order”
-
+    “error”: “Failed to create order”
 }
+```
 
 **3.2.5 Security**
 
@@ -290,9 +226,9 @@ The Kiosk Ordering System implements API Key-based security to protect backend A
 - Technology Stack: HTML, CSS, JavaScript
 - API Integration:
 
-\- Sends POST requests to /api\_kitchen/create\_order.php with order data.
+\- Sends POST requests to `/api\_kitchen/create\_order.php` with order data.
 
-\- Uses GET requests to /api\_customer/menu\_api.php and /api\_customer/categories\_api.php to dynamically load menu items by category.
+\- Uses GET requests to `/api\_customer/menu\_api.php` and `/api\_customer/categories\_api.php` to dynamically load menu items by category.
 
 \- API Key is added in headers (x-api-key) for secure communication.
 
@@ -303,15 +239,17 @@ The Kiosk Ordering System implements API Key-based security to protect backend A
 - Technology Stack: HTML, CSS, JavaScript, WebSocket, Axios
 - API Integration:
 
-\- Uses GET requests to /api\_kitchen/orders.php to load all active orders.
+\- Uses GET requests to `/api\_kitchen/orders.php` to load all active orders.
 
-\- Sends PUT requests to /api\_kitchen/update\_status.php to update order status.
+\- Sends PUT requests to `/api\_kitchen/update\_status.php` to update order status.
 
-\- Triggers SMS to customer by POST request to /routes/update\_status.js after status is updated to "ready".
+\- Triggers SMS to customer by POST request to `/routes/update\_status.js` after status is updated to "ready".
 
 **5.0 Database Design**
 
 **5.1 Entity-Relationship Diagram (ERD)**
+<img src="md pic/erd.jpg">
+
 **5.2 Scheme Justification**
 
 - The database consists of three main tables which are orders, menu\_items, and order\_items.
@@ -322,6 +260,9 @@ The Kiosk Ordering System implements API Key-based security to protect backend A
 **6.0 Business Logic and Data Validation**
 
 **6.1 Flowcharts**
+<img src="md pic/flowchart cust.png">
+<img src="md pic/flowchart kitchen.png">
+
 **6.2 Data Validation**
 
 **Frontend:**
