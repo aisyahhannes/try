@@ -69,7 +69,7 @@ This system demonstrates commercial value by digitalizing and streamlining food 
 
 **2.1 High-Level Diagram**
 
-<img src="md pic/erd.jpg">
+<img src="md pic/architecture.jpg">
 
 **Frontend/UI:**
 - Kiosk for customer to place orders by selecting the menu on the screen
