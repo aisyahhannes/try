@@ -238,11 +238,11 @@ The Kiosk Ordering System implements API Key-based security to protect backend A
 - Technology Stack: HTML, CSS, JavaScript, WebSocket, Axios
 - API Integration:
 
-\- Uses GET requests to `/api\_kitchen/orders.php` to load all active orders.
+\- Uses GET requests to `/api_kitchen/orders.php` to load all active orders.
 
-\- Sends PUT requests to `/api\_kitchen/update\_status.php` to update order status.
+\- Sends PUT requests to `/api_kitchen/update_status.php` to update order status.
 
-\- Triggers SMS to customer by POST request to `/routes/update\_status.js` after status is updated to "ready".
+\- Triggers SMS to customer by POST request to `/routes/update_status.js` after status is updated to "ready".
 
 **5.0 Database Design**
 
